@@ -31,10 +31,10 @@ def main():
     command = sys.argv[2]
     if command == "pull":
         pull(image,sys.argv[3])
-    else:
+    elif command == "push":
         push(image)
-
-
+    else:
+        build(image)
 
 
 main()
