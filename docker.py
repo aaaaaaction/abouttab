@@ -25,3 +25,5 @@ def main():
         pull(image,sys.argv[3])
     else:
         push(image)
+        
+main()
