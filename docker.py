@@ -18,6 +18,14 @@ def push(image):
             break
 
 
+def build(image):
+    while True:
+        result = os.system(f"docker build -t {image} minecraft")
+        if result == 0:
+            break
+
+
+
 def main():
     image = sys.argv[1]
     command = sys.argv[2]
@@ -25,5 +33,8 @@ def main():
         pull(image,sys.argv[3])
     else:
         push(image)
-        
+
+
+
+
 main()
